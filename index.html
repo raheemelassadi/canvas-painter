@@ -1,17 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Canvas Painter</title>
   </head>
   <body>
-    <div id="app">
-      <canvas id="canvas" width="150" height="150">
-        picture of user defined drawing
-      </canvas>
+    <div class="header">
+      <h2>Choose your color</h2>
+
+      <input type="color" value="#ff0000" id="color-picker"/>
     </div>
+  <audio src="sound/gameboy-sound.mp3"></audio>
+    <div class="gameboy">
+      <div class="screen-cont">
+        <div class="power"></div>
+        <div class="screen">
+          <div class="header">DOT MATRIX WITH STEREO SOUND</div>
+          <canvas id="myPics" width="230" height="205"></canvas>
+
+          <div class="animated-text">
+            Nintendo
+
+            <div class="copy">®</div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="controls-cont">
+        <div class="btn-direction">
+          <div class="vertical"></div>
+          <div class="horizontal"></div>
+        </div>
+        <div class="btn-AB"></div>
+        <div class="btn-start-select"></div>
+      </div>
+      <div class="speakers"></div>
+      <div class="on-off"><off-on ></div>
+      <div class="phones">phones</div>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
