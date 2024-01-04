@@ -351,3 +351,19 @@ input.btn-hide {
   right: 0;
   border: 0;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+input {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Press Start 2P", sans-serif;
+}

@@ -6,6 +6,7 @@ let strokeStyle = "black";
 const defaultColor = "#0000ff";
 const myPics = document.getElementById("myPics");
 const context = myPics.getContext("2d");
+const reset = document.getElementById("reset");
 
 window.addEventListener("load", startup, false);
 
@@ -33,6 +34,10 @@ window.addEventListener("mouseup", (e) => {
     y = 0;
     isDrawing = false;
   }
+
+  reset.addEventListener("click", function () {
+    context.clearRect(0, 0, myPics.width, myPics.height);
+  });
 });
 
 function drawLine(context, x1, y1, x2, y2) {
@@ -49,8 +54,7 @@ function startup() {
   colorPicker = document.querySelector("#color-picker");
   colorPicker.value = defaultColor;
   colorPicker.addEventListener("input", updateFirst, false);
-  colorPicker.addEventListener("change", updateAll, false);
-  colorPicker.ariaSelected();
+  colorPicker.select();
 }
 
 function updateFirst(event) {
