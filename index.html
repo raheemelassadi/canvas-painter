@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Canvas Painter</title>
   </head>
-  <body>
+  <body class="specific">
     <div class="header">
       <h2>Choose your color</h2>
 
-      <input type="color" value="#ff0000" id="color-picker"/>
+      <input type="color" value="#000000" id="color-picker"/>
     </div>
   <audio src="sound/gameboy-sound.mp3"></audio>
     <div class="gameboy">
@@ -44,7 +46,7 @@
 
     <div class="buttons">
       <button id="reset">Reset</button>
-      <button>Share</button>
+      <a class="twitter-share-button" id="download"><button>Download</button></a>
     </div>
 
     <script type="module" src="/main.js"></script>

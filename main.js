@@ -3,7 +3,7 @@ let x = 0;
 let y = 0;
 let colorPicker;
 let strokeStyle = "black";
-const defaultColor = "#0000ff";
+const defaultColor = "#000000";
 const myPics = document.getElementById("myPics");
 const context = myPics.getContext("2d");
 const reset = document.getElementById("reset");
@@ -62,3 +62,13 @@ function updateFirst(event) {
     strokeStyle = event.target.value;
   }
 }
+
+//screenshot and download function
+document.querySelector("#download").addEventListener("click", function () {
+  html2canvas(document.querySelector(".specific"), {
+    onrendered: function (canvas) {
+      // document.body.appendChild(canvas);
+      return Canvas2Image.saveAsPNG(canvas);
+    },
+  });
+});
